@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import ViagensNacionais from "./components/ViagensNacionais"
 import NossoMuralExperiencias from "./components/NossoMuralExperiencias"
 import FaleConosco from "./components/FaleConosco"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <ViagensNacionais/>
       <NossoMuralExperiencias/>
       <FaleConosco/>
+      <Footer/>
     </>
   )
 }
