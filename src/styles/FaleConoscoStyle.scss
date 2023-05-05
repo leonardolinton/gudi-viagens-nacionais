@@ -1,0 +1,66 @@
+@import "./variables.scss";
+
+.sectionFaleConosco {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 5%;
+  background-color: $bg-color-one;
+
+  h2 {
+    color: $text-color-two;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    text-shadow: $text-shadow;
+  }
+
+  form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    @media (max-width: $mobile-size) {
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      box-shadow: $box-shadow;
+      border-radius: 25px;
+      transition: ease-in-out 0.3s;
+
+      &::placeholder {
+        color: $text-color-three;
+        font-size: $font-size-p;
+        font-weight: $font-weight-light;
+      }
+
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+
+    button {
+      width: 200px;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      background-color: transparent;
+      border: solid 2px $bg-color-two;
+      color: $text-color-two;
+      font-size: $font-size-p;
+      font-weight: $font-weight-light;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+      transition: ease-in-out 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

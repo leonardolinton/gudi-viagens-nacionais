@@ -42,7 +42,7 @@ const NossoMuralExperiencias = () => {
   ];
 
   return (
-    <section className="nossoMural">
+    <section className="sectionNossoMural">
       <p>use a hashtag #brasilisverigudi</p>
       <h2>Nosso mural de Experiências</h2>
       <div className="cardsMural">
