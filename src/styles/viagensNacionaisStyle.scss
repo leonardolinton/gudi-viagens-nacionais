@@ -1,0 +1,183 @@
+@import "./variables.scss";
+
+.sectionViagensNacionais {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner01,
+.banner02,
+.banner03 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: $gradient-color;
+  color: $text-color-two;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: $text-color-two;
+    font-size: $font-size-p;
+    font-weight: $font-weight-medium;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 2px;
+      background-color: $bg-color-two;
+    }
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    max-width: 500px;
+    line-height: 100%;
+    text-shadow: $text-shadow;
+  }
+
+  p {
+    font-size: $font-size-p;
+    font-weight: $font-weight-light;
+    max-width: 500px;
+  }
+
+  button {
+    font-size: $font-size-p;
+    width: 160px;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    transition: ease-in-out 0.3s;
+    box-shadow: $box-shadow;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.btn1 {
+  border: solid 2px $bg-color-two;
+  color: $text-color-two;
+}
+
+.btn2 {
+  border: solid 2px $bg-color-one;
+  color: $text-color-one;
+}
+
+.banner02 {
+  flex-direction: row-reverse;
+  background: $bg-color-two;
+  color: $text-color-one;
+
+  span {
+    color: $text-color-one;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 2px;
+      background-color: $bg-color-one;
+    }
+  }
+}
+
+.bannerImg {
+  width: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.bannerText {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+  padding: 5%;
+}
+
+.cardsViagem {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: aqua;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 25%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    position: absolute;
+    width: 200px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: $text-color-two;
+    font-size: $font-size-p;
+    background: rgba(26, 26, 26, 0.329);
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transition:ease-in-out 0.3s;
+    &:hover{
+      transform: scale(1.3);
+    }
+  }
+}
+
+@media (max-width: $mobile-size) {
+  .banner01,
+  .banner02,
+  .banner03 {
+    flex-direction: column;
+  }
+
+  .bannerImg,
+  .bannerText {
+    width: 100%;
+
+    h2 {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    span {
+      flex-direction: column;
+    }
+  }
+
+  .card {
+    width: 50%;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+}
